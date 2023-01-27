@@ -10,11 +10,14 @@
         <router-link to="/demonstration">Demonstração</router-link> |
         <router-link to="/contact">Contato</router-link> |
         <router-link to="/login">Login</router-link> |
-        <router-link to="/boletos">2ª via Boletos</router-link> |
+        <router-link to="/boletos">2ª via Boletos</router-link>
       </div>
       <router-view />
     </div>
   </header>
+  <body>
+    <div class="background"></div>
+  </body>
 </template>
 
 <script lang="ts">
@@ -26,34 +29,26 @@ export default {
 
 <style lang="scss" scoped>
 @import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
-* {
-  text-decoration: none;
-  list-style: none;
-}
+
 header {
   font-family: roboto, sans-serif;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
 }
 .nav {
-  height: 80px;
+  height: 90px;
   width: 100%;
   background: #d2dae0;
 }
 .img-logo {
-  width: 220px;
-  height: 135px;
-  padding-top: 20px;
-  margin-top: -55px;
+  width: 280px;
+  height: 80px;
+  margin-top: 5px;
   margin-left: 20px;
-  border: 2px solid black;
 }
 
 .menu {
   float: right;
   margin-right: 40px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .menu a {
   text-decoration: none;
@@ -67,6 +62,13 @@ a:focus {
   color: #42b983;
   font-weight: bold;
   transition: 0.5s;
+}
+
+.background {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../assets/buildings.jpg");
 }
 
 @media only screen and (max-width: 690px) {
